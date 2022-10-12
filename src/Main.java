@@ -12,7 +12,7 @@ public class Main {
         // Самостоятельно выберите способ создания массива: с помощью ключевого слова или сразу заполненный элементами.
 
         byte[] numbers = new byte[]{1, 2, 3}; //1.
-        double[] decimalFraction = {1.57, 7.654, 9.986}; //2.
+        double[] decimalFractions = {1.57, 7.654, 9.986}; //2.
         char[] trafficSignal = new char[]{'r', 'y', 'g'}; //3.
 
         //Задание 2
@@ -27,59 +27,43 @@ public class Main {
         //    - На одной строчке расположены элементы только одного массива
 
         //1.
-        byte i = numbers[0];
-        for (i = 0; i < 3; i++) {
-            System.out.print(numbers[i] + ", ");
+
+        for (byte i = 0; i < numbers.length; i++) {
+            System.out.print(numbers[i]);
+            if (i != numbers.length - 1) {
+                System.out.print(", ");
+            }
         }
-        System.out.println();
-        //2
-        double d = decimalFraction[0];
-        for (d = 0; d < 3; d++) {
-            System.out.print(decimalFraction[(int) d] + ", ");
+        System.out.println ();
+
+        //2.
+
+        for (int i = 0; i < decimalFractions.length; i++) {
+            System.out.print(decimalFractions[i]);
+            if (i != decimalFractions.length - 1) {
+                System.out.print(", ");
+            }
         }
-        System.out.println();
-        //3
-        char t = trafficSignal[0];
-        for (t = 0; t < 3; t++) {
-            System.out.print(trafficSignal[(char) t] + ", ");
+        System.out.println ();
+
+        //3.
+
+        for (char i = 0; i < trafficSignal.length; i++) {
+            System.out.print(trafficSignal[i]);
+            if (i != trafficSignal.length - 1) {
+                System.out.print(", ");
+            }
         }
-        System.out.println();
+        System.out.println ();
 
 
-        //Задание 3
-        System.out.println("Задание 3.");
-        //Теперь ваша задача – распечатать все элементы всех трех массивов,
-        // но начинать нужно не с первого элемента массива, а с последнего. Элементы должны быть распечатаны через запятую,
-        // при этом элементы одного массива располагаются на одной строчке, а элементы другого массива – на другой.
-        //Запятая между последним элементом одного массива и первым элементом следующего не нужна.
 
-        //1
-        byte ii = numbers[2];
-        for (ii = 2; ii >= 0; ii--) {
-            System.out.print(numbers[ii] + ", ");
-        }
-        System.out.println();
-
-        //2
-        double dd = decimalFraction[2];
-        for (dd = 2; dd >= 0; dd--) {
-            System.out.print(decimalFraction[(int) dd] + ", ");
-        }
-        System.out.println();
-
-        //3
-        char tt = trafficSignal[2];
-        for (tt = 2; tt >= 0; tt--) {
-            System.out.print(trafficSignal[tt] + ", ");
-        }
-        System.out.println();
-
-
-        //Задание 4
-        System.out.println("Задание 4.");
-        //Пройдитесь по первому целочисленному массиву и все нечетные числа в нем сделайте четными (нужно прибавить 1).
-        //Важно: код должен работать с любым целочисленным массивом, поэтому для решения задания вам нужно использовать циклы.
-        //Распечатайте результат преобразования в консоль.
 
     }
 }
+
+
+
+
+
+
