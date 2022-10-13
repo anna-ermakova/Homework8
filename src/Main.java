@@ -1,3 +1,6 @@
+import java.lang.reflect.Array;
+import java.util.Arrays;
+
 public class Main {
     public static void main(String[] args) {
 
@@ -34,7 +37,7 @@ public class Main {
                 System.out.print(", ");
             }
         }
-        System.out.println ();
+        System.out.println();
 
         //2.
 
@@ -44,26 +47,71 @@ public class Main {
                 System.out.print(", ");
             }
         }
-        System.out.println ();
+        System.out.println();
 
         //3.
 
-        for (char i = 0; i < trafficSignal.length; i++) {
+        for (int i = 0; i < trafficSignal.length; i++) {
             System.out.print(trafficSignal[i]);
             if (i != trafficSignal.length - 1) {
                 System.out.print(", ");
             }
         }
-        System.out.println ();
+        System.out.println();
 
+        //Задание 3
+        System.out.println("Задание 3.");
 
+        //Теперь ваша задача – распечатать все элементы всех трех массивов,
+        // но начинать нужно не с первого элемента массива, а с последнего.
+        // Элементы должны быть распечатаны через запятую, при этом элементы одного массива располагаются на одной строчке,
+        // а элементы другого массива – на другой.
+        //Запятая между последним элементом одного массива и первым элементом следующего не нужна.
+
+        //1.
+
+        for (int i = numbers.length - 1; i <= numbers.length && i >= 0; i--) {
+            System.out.print(numbers[i]);
+            if (i != 0) {
+                System.out.print(", ");
+            }
+        }
+        System.out.println();
+
+        //2.
+
+        for (int i = decimalFractions.length - 1; i <= decimalFractions.length && i >= 0; i--) {
+            System.out.print(decimalFractions[i]);
+            if (i != 0) {
+                System.out.print(", ");
+            }
+        }
+        System.out.println();
+
+        //3.
+
+        for (int i = trafficSignal.length - 1; i <= trafficSignal.length && i >= 0; i--) {
+            System.out.print(trafficSignal[i]);
+            if (i != 0) {
+                System.out.print(", ");
+            }
+        }
+        System.out.println();
+
+        //Задание 4
+        System.out.println("Задание 4.");
+
+        //Пройдитесь по первому целочисленному массиву и все нечетные числа в нем сделайте четными (нужно прибавить 1).
+        //Важно: код должен работать с любым целочисленным массивом, поэтому для решения задания вам нужно использовать циклы.
+        //Распечатайте результат преобразования в консоль.
+
+        for (byte i = 0; i < numbers.length; i++) {
+            if (numbers[i] % 2 != 0) {
+                numbers[i] += 1;
+            }
+        }
+        System.out.print(Arrays.toString(numbers));
 
 
     }
 }
-
-
-
-
-
-
